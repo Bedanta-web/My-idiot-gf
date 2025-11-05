@@ -1,0 +1,100 @@
+:root{--bg:#0f1724;
+    --card:#0b1220;
+    --accent:#7c3aed;
+    --muted:#94a3b8;
+    --win:#16a34a}
+*{box-sizing:border-box}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+  background: rgba(112, 173, 181, 0.926);
+  color: #647283;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.wrap {
+  width: min(640px, 92vw);
+  background: transparent;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.7);
+}
+
+header{display:flex;align-items:center;
+    justify-content:space-between;
+    margin-bottom:14px}
+h1{font-size:20px;
+    margin:0}
+.controls{display:flex;
+    gap:8px;
+    align-items:center}
+.btn{background:transparent;
+    border:1px solid rgba(255,255,255,0.06);
+    padding:8px 12px;
+    border-radius:8px;
+    color:inherit;
+    cursor:pointer}
+.btn.primary{background:var(--accent);
+    border-color:transparent}
+.status{font-size:14px;
+    color:var(--muted)}
+.board{display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;margin:18px 0}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+  background: rgb(245, 4, 4); /* your red background */
+  color: #fff; /* make text white */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.wrap {
+  width: min(640px, 92vw);
+  background: rgba(0, 0, 0, 0.3); /* a translucent black overlay */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+/* make board cells visible again */
+.cell {
+  aspect-ratio: 1/1;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+  color: #fff;
+}
+.cell:active{transform:scale(.98)}
+.cell.disabled{cursor:default;opacity:.9}
+.cell.x { color: #00eaff; }
+.cell.o { color: #ffef00; }   
+.info{display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px}
+.score{display:flex;
+    gap:12px;
+    align-items:center}
+.score div{font-size:13px;
+    color:var(--muted)}
+.winnerLine{height:4px;
+    background:var(--win);
+    border-radius:4px;
+    margin-top:10px;
+    display:none}
+footer{margin-top:10px;
+    text-align:center;
+    color:var(--muted);
+    font-size:13px}
+@media (max-width:420px){.cell{font-size:40px}}
